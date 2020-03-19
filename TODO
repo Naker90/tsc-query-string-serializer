@@ -1,2 +1,4 @@
-- Renombrar el proyecto y el repo a query-string
 - Soportar cualquier tipo de dato, actualmente solo acepta strings
+- Crear un README
+- Crear un ejemplo de cliente HTTP (Metodo GET unicamente)
+- PROBAR QUE EL SERIALIZADOR FUNCIONA CON UN METODO GET (Necestas encodear los caracteres?)
