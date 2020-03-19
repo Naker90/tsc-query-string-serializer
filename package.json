@@ -1,0 +1,48 @@
+{
+  "name": "tsc-query-params-serializer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.ts",
+  "contributors": [
+    "Antonio Sánchez <antoniojesussg96@gmail.com>"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "build": "babel src -x .ts -d build",
+    "build:watch": "babel src -x .ts -d build --watch",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/jest": "^25.1.1",
+    "babel-jest": "^25.1.0",
+    "jest": "^25.1.0",
+    "typescript": "^3.7.5"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "moduleDirectories": [
+      "./node_modules",
+      "./src"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+    },
+    "testMatch": [
+      "<rootDir>/__test__/**/*.(j|t)s?(x)",
+      "<rootDir>/src/**/?(*.)(spec|test).(j|t)s?(x)"
+    ]
+  }
+}

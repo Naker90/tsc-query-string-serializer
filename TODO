@@ -1,0 +1,2 @@
+- Renombrar el proyecto y el repo a query-string
+- Soportar cualquier tipo de dato, actualmente solo acepta strings
