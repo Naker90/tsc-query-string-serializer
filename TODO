@@ -2,6 +2,7 @@
 - Meter prettier
 - Meter tests de github actions
 - Crear script para desplegar version de la lib
+- Meter descripcion en el package.json
 - Crear un README
 - Crear un ejemplo de cliente HTTP (Metodo GET unicamente)
 - PROBAR QUE EL SERIALIZADOR FUNCIONA CON UN METODO GET (Necestas encodear los caracteres?)
