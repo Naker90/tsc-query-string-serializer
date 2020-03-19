@@ -1,15 +1,15 @@
-import { Serializable } from '../Serializable';
-import { arraySerializer } from './arraySerializer';
+import {arraySerializer} from './arraySerializer';
+import {Serializable} from "../types/Serializable";
 
 export const objectSerializer = {
-    format: (key: string, value: Serializable, preSquareBrackets: string) => {
+    format: (key: string, value: Object, preSquareBrackets: string) => {
       let serializedKeysAndValues : string[] = [];
       recursiveSerialization(key, value);
       return serializedKeysAndValues;
 
-      function recursiveSerialization(key: string, value: Serializable) {
+      function recursiveSerialization(key: string, value: Object) {
         const entries = Object.entries(value);
-        entries.forEach(([innerKey, value]: [string, Serializable]) => {
+        entries.forEach(([innerKey, value]: [string, Object]) => {
           if (!objectSerializer.isObject(value) && !Array.isArray(value)) {
             const squareBrackets = preSquareBrackets + `[${innerKey}]`;
             serializedKeysAndValues = serializedKeysAndValues.concat(`${key}${squareBrackets}=${value}`);

@@ -1,4 +1,4 @@
-import { queryStringSerializer } from '../src/queryStringSerializer';
+import {queryStringSerializer} from '../src/queryStringSerializer';
 
 describe('query string serializer should', () => {
 

@@ -1,7 +1,7 @@
-import { Serializable } from './Serializable';
-import { arraySerializer  } from './serializers/arraySerializer';
-import { objectSerializer } from './serializers/objectSerializer';
-import { primitiveSerializer } from './serializers/primitiveSerializer';
+import {Serializable} from './types/Serializable';
+import {arraySerializer} from './serializers/arraySerializer';
+import {objectSerializer} from './serializers/objectSerializer';
+import {primitiveSerializer} from './serializers/primitiveSerializer';
 
 const QUERY_PARAMS_DELIMITER = "&";
 
