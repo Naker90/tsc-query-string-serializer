@@ -2,13 +2,14 @@
   "name": "tsc-query-string-serializer",
   "version": "1.0.0",
   "description": "",
-  "main": "main.ts",
+  "main": "src/queryStringSerializer.ts",
   "contributors": [
     "Antonio Sánchez <antoniojesussg96@gmail.com>"
   ],
   "license": "ISC",
   "scripts": {
     "build": "babel src -x .ts -d build",
+    "type-check": "tsc --noEmit",
     "build:watch": "babel src -x .ts -d build --watch",
     "test": "jest",
     "test:watch": "jest --watch"
