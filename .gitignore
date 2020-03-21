@@ -6,11 +6,8 @@ npm-debug.log*
 # Dependencies
 node_modules/
 
-# Coverage
-coverage
-
-# Transpiled files
-build/
+# Compiled files
+dist/
 
 # VS Code
 .vscode
