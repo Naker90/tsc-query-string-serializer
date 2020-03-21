@@ -27,10 +27,15 @@
       "./node_modules",
       "./src"
     ],
-    "moduleFileExtensions": ["js", "ts"],
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
     "transform": {
       "^.+\\.(js|ts)$": "babel-jest"
     },
-    "testMatch": ["<rootDir>/__test__/**/*.(j|t)s"]
+    "testMatch": [
+      "<rootDir>/__test__/**/*.(j|t)s"
+    ]
   }
 }

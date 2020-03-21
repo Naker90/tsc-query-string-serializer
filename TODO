@@ -1,4 +1,4 @@
-- Crear script para compilar
+- Hacer opcional el parametro preSquareBrackets
 - Meter prettier
 - Meter tests de github actions
 - Crear script para desplegar version de la lib
