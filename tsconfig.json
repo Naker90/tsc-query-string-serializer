@@ -1,8 +1,11 @@
 {
   "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
     "target": "es5",
-    "module": "es2015",
-    "lib": ["es2015", "es2017", "dom"],
+    "module": "commonjs",
+    "lib": ["es2015", "es2017.object", "dom"],
+    "declaration": true,
     "sourceMap": true,
     "strict": true,
     "alwaysStrict": true,
@@ -18,5 +21,6 @@
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true
-  }
+  },
+  "exclude": ["__test__"]
 }

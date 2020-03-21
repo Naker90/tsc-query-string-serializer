@@ -9,6 +9,7 @@
   "license": "ISC",
   "scripts": {
     "build": "babel src -x .ts -d build",
+    "compile": "tsc",
     "type-check": "tsc --noEmit",
     "build:watch": "babel src -x .ts -d build --watch",
     "test": "jest",
