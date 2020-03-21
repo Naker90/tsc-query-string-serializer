@@ -1,17 +1,18 @@
 name: tests
 
-on:
-  push:
-    branches: [ master ]
+on: [push]
 
 jobs:
   run-tests:
-    name: "Tests"
+    name: Tests
     runs-on: ubuntu-latest
     
     steps:
-    - name: "Install NPM depencies"
-      run: npm i
+      - name: Checkout repository
+      - uses: actions/checkout@v1
+        
+      - name: Install NPM depencies
+        run: npm i
 
-    - name: "Run tests"
-      run: npm run test
+      - name: Run tests
+        run: npm run test
