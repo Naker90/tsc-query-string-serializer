@@ -6,21 +6,16 @@
   "contributors": [
     "Antonio Sánchez <antoniojesussg96@gmail.com>"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
-    "build": "babel src -x .ts -d build",
     "compile": "tsc",
-    "type-check": "tsc --noEmit",
-    "build:watch": "babel src -x .ts -d build --watch",
     "test": "jest",
     "test:watch": "jest --watch"
   },
-  "dependencies": {},
+  "dependencies": {
+    "core-js": "3.6.4"
+  },
   "devDependencies": {
-    "@babel/cli": "7.8.4",
-    "@babel/core": "7.8.4",
-    "@babel/plugin-transform-modules-commonjs": "7.8.3",
-    "@babel/preset-typescript": "7.8.3",
     "@types/jest": "25.1.1",
     "babel-jest": "25.1.0",
     "jest": "25.1.0",
@@ -32,18 +27,10 @@
       "./node_modules",
       "./src"
     ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx"
-    ],
+    "moduleFileExtensions": ["js", "ts"],
     "transform": {
-      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+      "^.+\\.(js|ts)$": "babel-jest"
     },
-    "testMatch": [
-      "<rootDir>/__test__/**/*.(j|t)s?(x)",
-      "<rootDir>/src/**/?(*.)(spec|test).(j|t)s?(x)"
-    ]
+    "testMatch": ["<rootDir>/__test__/**/*.(j|t)s"]
   }
 }
