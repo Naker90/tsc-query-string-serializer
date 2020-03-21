@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout repository
       - uses: actions/checkout@v1
+        name: Check out
         
       - name: Install NPM depencies
         run: npm i
