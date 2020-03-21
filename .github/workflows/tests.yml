@@ -1,0 +1,17 @@
+name: tests
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  run-tests:
+    name: "Tests"
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: "Install NPM depencies"
+      run: npm i
+
+    - name: "Run tests"
+      run: npm run test
