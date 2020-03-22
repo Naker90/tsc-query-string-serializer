@@ -8,19 +8,11 @@
     "declaration": true,
     "sourceMap": true,
     "strict": true,
-    "alwaysStrict": true,
-    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "strictFunctionTypes": true,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": true
+    "noUnusedParameters": true
   },
   "exclude": ["__test__"]
 }
