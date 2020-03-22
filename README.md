@@ -4,6 +4,16 @@
 **tsc-query-string-serializer** is an utility written in TypeScript to serialize objects into _query strings_ for _GET_
 HTTP requests.
 
+Signature (declaration):
+
+```typescript
+export declare const queryStringSerializer: {
+    serialize: (obj: Object, encodeUri?: boolean) => string;
+};
+```
+
+By default the _query string_ is encoded. If you prefer not encode it just set to _false_ the optional argument _encodeUri_.
+
 Usage example:
 
 ```typescript
@@ -14,7 +24,7 @@ const endPoint = "https://myendpoint.com/api/products?" + serializedCriteria;
 myHttpClient.get(endPoint);
 ```
 
-Output examples:
+Output examples without encode:
 
 Input | Output
 --- | ---
