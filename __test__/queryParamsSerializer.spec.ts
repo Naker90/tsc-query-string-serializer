@@ -21,7 +21,7 @@ describe("query string serializer should", () => {
   });
 
   it("serializes multiple keys and values", () => {
-    let obj = { a: "b", c: "d" };
+    const obj = { a: "b", c: "d" };
 
     const queryString = queryStringSerializer.serialize(obj, encodeUri);
 
@@ -29,7 +29,7 @@ describe("query string serializer should", () => {
   });
 
   it("serializes arrays", () => {
-    let array = ["foo","bar","fizz"];
+    const array = ["foo","bar","fizz"];
 
     const queryString = queryStringSerializer.serialize({a : array}, encodeUri);
 
@@ -37,7 +37,7 @@ describe("query string serializer should", () => {
   });
 
   it("serializes nested objects", () => {
-    let obj = { foo: { a: "b", baz: { a: "b" }}};
+    const obj = { foo: { a: "b", baz: { a: "b" }}};
 
     const queryString = queryStringSerializer.serialize(obj, encodeUri);
 
@@ -45,7 +45,7 @@ describe("query string serializer should", () => {
   });
 
   it("serializes nested arrays", () => {
-    let obj = { foo: [ "a", [ "b", [ "c" ] ] ] };
+    const obj = { foo: [ "a", [ "b", [ "c" ] ] ] };
 
     const queryString = queryStringSerializer.serialize(obj, encodeUri);
 
@@ -53,7 +53,7 @@ describe("query string serializer should", () => {
   });
 
   it("serializes complicated nested objects", () => {
-    let obj = { foo: { a: "b", c: { d: "e", f: { g: "h" } } } };
+    const obj = { foo: { a: "b", c: { d: "e", f: { g: "h" } } } };
 
     const queryString = queryStringSerializer.serialize(obj, encodeUri);
 
@@ -61,7 +61,7 @@ describe("query string serializer should", () => {
   });
 
   it("serializes complicated nested arrays", () => {
-    let obj = { "foo": [ "a", "b", [ "c", "d", [ "e", [ "f" ] ] ] ] };
+    const obj = { "foo": [ "a", "b", [ "c", "d", [ "e", [ "f" ] ] ] ] };
 
     const queryString = queryStringSerializer.serialize(obj, encodeUri);
 
@@ -69,7 +69,7 @@ describe("query string serializer should", () => {
   });
 
   it("serializes multiple keys and values with nested arrays", () => {
-    let obj = {
+    const obj = {
       foo: [ "a", [ "b", [ "c" ] ] ],
       bar: [ "a", [ "b", [ "c" ] ] ]
     };
@@ -80,7 +80,7 @@ describe("query string serializer should", () => {
   });
 
   it("serializes multiple keys and values with nested objects", () => {
-    let obj = {
+    const obj = {
       foo: { a: "b", c: { d: "e" } },
       bar: { a: "b", c: { d: "e" } }
     };
@@ -91,7 +91,7 @@ describe("query string serializer should", () => {
   });
 
   it("serializes nested objects with inners arrays", () => {
-    let obj = { foo: { a: "b", c: { d: [ "e", "f" ] } } };
+    const obj = { foo: { a: "b", c: { d: [ "e", "f" ] } } };
 
     const queryString = queryStringSerializer.serialize(obj, encodeUri);
 
@@ -99,7 +99,7 @@ describe("query string serializer should", () => {
   });
 
   it("serializes nested arrays with inners objects", () => {
-    let obj = { foo: [ "a", [ "b", { d: "e" } ] ] };
+    const obj = { foo: [ "a", [ "b", { d: "e" } ] ] };
 
     const queryString = queryStringSerializer.serialize(obj, encodeUri);
 
@@ -108,7 +108,7 @@ describe("query string serializer should", () => {
 
   it("encodes uri", () => {
       const encodeUri = true;
-      let obj = { a: [ "b", "c" ] };
+      const obj = { a: [ "b", "c" ] };
 
       const queryString = queryStringSerializer.serialize(obj, encodeUri);
 
