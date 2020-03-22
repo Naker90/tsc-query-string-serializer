@@ -7,7 +7,7 @@ import "core-js/features/object/entries"
 const QUERY_PARAMS_DELIMITER = "&";
 
 export const queryStringSerializer = {
-    serialize: (obj: Object): string => {
+    serialize: (obj: Object, encodeUri: boolean = true): string => {
       let keysAndValues: [string, Serializable][] = Object.entries(obj);
       let serializedKeysAndValues : string[] = [];
       keysAndValues
@@ -20,6 +20,7 @@ export const queryStringSerializer = {
             serializedKeysAndValues.push(primitiveSerializer.serialize(key, value));
           }
         });
-      return serializedKeysAndValues.join(QUERY_PARAMS_DELIMITER);
+        const queryString = serializedKeysAndValues.join(QUERY_PARAMS_DELIMITER);
+        return encodeUri ? encodeURI(queryString) : queryString;
     }
 };
