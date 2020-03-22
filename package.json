@@ -23,22 +23,5 @@
     "babel-jest": "25.1.0",
     "jest": "25.1.0",
     "typescript": "3.7.5"
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "moduleDirectories": [
-      "./node_modules",
-      "./src"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "ts"
-    ],
-    "transform": {
-      "^.+\\.(js|ts)$": "babel-jest"
-    },
-    "testMatch": [
-      "<rootDir>/__test__/**/*.(j|t)s"
-    ]
   }
 }
