@@ -7,6 +7,7 @@
     "Antonio Sánchez <antoniojesussg96@gmail.com>"
   ],
   "license": "MIT",
+  "keywords": ["typescript", "query string", "serializer", "http"],
   "scripts": {
     "compile": "npm run clean && tsc",
     "clean": "rm -r dist &>/dev/null",
@@ -23,5 +24,9 @@
     "babel-jest": "25.1.0",
     "jest": "25.1.0",
     "typescript": "3.7.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nakerdev/tsc-query-string-serializer"
   }
 }
