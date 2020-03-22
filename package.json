@@ -1,7 +1,7 @@
 {
   "name": "tsc-query-string-serializer",
   "version": "1.0.0",
-  "description": "",
+  "description": "tsc-query-string-serializer is an utility written in TypeScript to serialize objects into query strings for GET HTTP requests",
   "main": "src/queryStringSerializer.ts",
   "contributors": [
     "Antonio Sánchez <antoniojesussg96@gmail.com>"
