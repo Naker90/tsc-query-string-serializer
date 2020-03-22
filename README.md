@@ -1,5 +1,6 @@
 # TypeScript Query String Serializer
-![Tests](https://github.com/Naker90/tsc-query-string-serializer/workflows/tests/badge.svg?branch=master&event=push)
+![Tests](https://github.com/Nakerdev/tsc-query-string-serializer/workflows/Tests/badge.svg?branch=master&event=push)
+![Compilation](https://github.com/Nakerdev/tsc-query-string-serializer/workflows/Compilation/badge.svg?branch=master&event=push)
 
 **tsc-query-string-serializer** is an utility written in TypeScript to serialize objects into _query strings_ for _GET_
 HTTP requests.
