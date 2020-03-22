@@ -2,7 +2,7 @@ import {arraySerializer} from './arraySerializer';
 import {Serializable} from "../types/Serializable";
 
 export const objectSerializer = {
-    format: (key: string, value: Object, preSquareBrackets: string) => {
+    format: (key: string, value: Object, preSquareBrackets: string = ''): Array<string> => {
       let serializedKeysAndValues : string[] = [];
       recursiveSerialization(key, value);
       return serializedKeysAndValues;

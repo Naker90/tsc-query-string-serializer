@@ -13,9 +13,9 @@ export const queryStringSerializer = {
       keysAndValues
         .forEach(([key, value]: [string, Serializable]) => {
           if(arraySerializer.isArray(value)){
-            serializedKeysAndValues = serializedKeysAndValues.concat(arraySerializer.serialize(key, value, ''));
+            serializedKeysAndValues = serializedKeysAndValues.concat(arraySerializer.serialize(key, value));
           }else if(objectSerializer.isObject(value)){
-            serializedKeysAndValues = serializedKeysAndValues.concat(objectSerializer.format(key, value, ''));
+            serializedKeysAndValues = serializedKeysAndValues.concat(objectSerializer.format(key, value));
           }else{
             serializedKeysAndValues.push(primitiveSerializer.serialize(key, value));
           }
