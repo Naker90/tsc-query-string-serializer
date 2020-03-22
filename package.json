@@ -7,7 +7,12 @@
     "Antonio Sánchez <antoniojesussg96@gmail.com>"
   ],
   "license": "MIT",
-  "keywords": ["typescript", "query string", "serializer", "http"],
+  "keywords": [
+    "typescript",
+    "query string",
+    "serializer",
+    "http"
+  ],
   "scripts": {
     "compile": "npm run clean && tsc",
     "clean": "rm -r dist &>/dev/null",
