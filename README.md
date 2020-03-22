@@ -8,9 +8,9 @@ Usage example:
 
 ```typescript
 import { queryStringSerializer } from "tsc-query-string-serializer";
-const searchCriteria = { firstName: "Alvaro", age: 22 };
+const searchCriteria = { ids: [ 'product-1', 'product-2' ] };
 const serializedCriteria = queryStringSerializer.serialize(searchCriteria);
-const endPoint = "https://myendpoint.com/api/people?" + serializedCriteria;
+const endPoint = "https://myendpoint.com/api/products?" + serializedCriteria;
 myHttpClient.get(endPoint);
 ```
 
