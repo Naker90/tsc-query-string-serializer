@@ -1,8 +1,8 @@
-import {Serializable} from './types/Serializable';
-import {arraySerializer} from './serializers/arraySerializer';
-import {objectSerializer} from './serializers/objectSerializer';
-import {primitiveSerializer} from './serializers/primitiveSerializer';
-import 'core-js/features/object/entries'
+import {Serializable} from "./types/Serializable";
+import {arraySerializer} from "./serializers/arraySerializer";
+import {objectSerializer} from "./serializers/objectSerializer";
+import {primitiveSerializer} from "./serializers/primitiveSerializer";
+import "core-js/features/object/entries"
 
 const QUERY_PARAMS_DELIMITER = "&";
 
