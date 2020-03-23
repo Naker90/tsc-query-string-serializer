@@ -58,9 +58,15 @@ function publishPackage() {
 	exitIfLastCommandFail "NPM package publication fails."
 }
 
+function showSuccessMessage() {
+	echo -e "${GREEN}[SUCC] Package published successfully."
+	exit 0
+}
+
 clean
 installNpmDependencies
 compile
 movePackageConfigFileToDistributionFolder
 moveToDistributionFolder
 publishPackage
+showSuccessMessage
