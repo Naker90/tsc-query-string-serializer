@@ -36,3 +36,33 @@ Input | Output
 { a: { b: 'c', d: { e: 'f' } } } | a[b]=c&a[d][e]=f
 
 For more complex examples you can see ![the tests](https://github.com/Naker90/tsc-query-string-serializer/blob/master/__test__/queryParamsSerializer.spec.ts).
+
+Real usage example using ![PotterApi](https://www.potterapi.com/) and NodeJs with ![https](https://nodejs.org/api/http.html) module.
+
+```typescript
+import * as https from 'https';
+import { queryStringSerializer } from 'tsc-query-string-serializer';
+
+const server = 'https://www.potterapi.com/v1';
+const path = '/characters';
+const searchCriteria = {
+    key: "your-potter-api-key",
+    house: 'Gryffindor',
+    bloodStatus: "pure-blood"
+};
+
+const queryString = queryStringSerializer.serialize(searchCriteria);
+const endpoint = `${server}${path}?${queryString}`;
+
+https.get(endpoint, (res) => {
+    console.log('statusCode:', res.statusCode);
+    console.log('headers:', res.headers);
+
+    res.on('data', (d) => {
+        process.stdout.write(d);
+    });
+
+}).on('error', (e) => {
+    console.error(e);
+});
+```
