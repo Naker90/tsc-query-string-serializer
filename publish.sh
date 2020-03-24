@@ -3,6 +3,7 @@
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
+lib_version=$1
 
 function exitIfLastCommandFail() {
 	if [ $? -eq 1 ]; then
@@ -14,7 +15,7 @@ function exitIfLastCommandFail() {
 function clean() {
 	if [ -d dist ]; then
 		echo -e "${YELLOW}[INFO] Clean old distribution folder..."
-		rm -r dist 
+		rm -r dist
 	fi
 	if [ -d node_modules ]; then
 		echo -e "${YELLOW}[INFO] Clean old instaled node modules..."
@@ -47,6 +48,12 @@ function movePackageConfigFileToDistributionFolder(){
 	sed "s/src\/queryStringSerializer.ts/index.js/g" package.json > dist/package.json
 }
 
+function markCommitWithLibVersion() {
+    grep "\"version\": \"$lib_version\"" package.json &> /dev/null
+    exitIfLastCommandFail "The version specified is not the same as the one defined in package.json"
+    git tag -a "release" -m "version $lib_version"
+}
+
 function moveToDistributionFolder() {
 	echo -e "${YELLOW}[INFO] Move to distribution folder"
 	cd dist
@@ -66,6 +73,7 @@ function showSuccessMessage() {
 clean
 installNpmDependencies
 compile
+markCommitWithLibVersion
 movePackageConfigFileToDistributionFolder
 moveToDistributionFolder
 publishPackage
