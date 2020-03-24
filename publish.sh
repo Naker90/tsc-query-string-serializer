@@ -51,7 +51,7 @@ function movePackageConfigFileToDistributionFolder(){
 function markCommitWithLibVersion() {
     grep "\"version\": \"$lib_version\"" package.json &> /dev/null
     exitIfLastCommandFail "The version specified is not the same as the one defined in package.json"
-    git tag -a "release" -m "version $lib_version"
+    git tag -a "v${lib_version}" -m "release"
 }
 
 function moveToDistributionFolder() {
