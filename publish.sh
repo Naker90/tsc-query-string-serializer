@@ -44,18 +44,23 @@ function compile() {
 }
 
 function movePackageConfigFileToDistributionFolder(){
-	echo -e "${YELLOW}[INFO] Move package.json to distribution folder and change main file to index.js"
+	echo -e "${YELLOW}[INFO] Move package.json to distribution folder and change main file to index.js..."
 	sed "s/src\/queryStringSerializer.ts/index.js/g" package.json > dist/package.json
+}
+
+function copyReadmeFile() {
+	echo -e "${YELLOW}[INFO] Copy README file..."
+	cp README.md dist/README.md
 }
 
 function markCommitWithLibVersion() {
     grep "\"version\": \"$lib_version\"" package.json &> /dev/null
-    exitIfLastCommandFail "The version specified is not the same as the one defined in package.json"
+    exitIfLastCommandFail "The version specified is not the same as the one defined in package.json..."
     git tag -a "v${lib_version}" -m "release"
 }
 
 function moveToDistributionFolder() {
-	echo -e "${YELLOW}[INFO] Move to distribution folder"
+	echo -e "${YELLOW}[INFO] Move to distribution folder..."
 	cd dist
 }
 
@@ -74,6 +79,7 @@ clean
 installNpmDependencies
 compile
 markCommitWithLibVersion
+copyReadmeFile
 movePackageConfigFileToDistributionFolder
 moveToDistributionFolder
 publishPackage
