@@ -61,7 +61,7 @@ function moveToDistributionFolder() {
 
 function publishPackage() {
 	echo -e "${YELLOW}[INFO] Publish to npm..."
-	npm publish --dry-run
+	npm publish 
 	exitIfLastCommandFail "NPM package publication fails."
 }
 
