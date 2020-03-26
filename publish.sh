@@ -84,3 +84,4 @@ movePackageConfigFileToDistributionFolder
 moveToDistributionFolder
 publishPackage
 showSuccessMessage
+
