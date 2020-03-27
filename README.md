@@ -18,7 +18,7 @@ By default the _query string_ is encoded. If you prefer not encode it just set t
 Usage example:
 
 ```typescript
-import { queryStringSerializer } from "tsc-query-string-serializer";
+import { queryStringSerializer } from "tsc-query-string-serializer/queryStringSerializer";
 const searchCriteria = { ids: [ 'product-1', 'product-2' ] };
 const queryString = queryStringSerializer.serialize(searchCriteria);
 const endPoint = "https://myendpoint.com/api/products?" + queryString;
